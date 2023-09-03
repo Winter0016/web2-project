@@ -1,0 +1,42 @@
+.information{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+}
+.information .Name{
+    width:14vw;
+    font-size: 1.5vw;
+    margin-top: 2vw;
+    margin-right:6vw;
+    border:6px solid ;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-color:rgb(252, 252, 252);
+    background-color: #FF5656;
+}
+.information .Name1{
+    width:14vw;
+    font-size: 2.5vw;
+    margin-top: 2vw;
+    margin-right:6vw;
+    border:6px solid transparent;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+}
+.information .Name2{
+    width:14vw;
+    font-size: 1.5vw;
+    margin-top: 2vw;
+    border:6px solid ;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-color:rgb(252, 252, 252);
+    background-color: #FF5656;
+}
