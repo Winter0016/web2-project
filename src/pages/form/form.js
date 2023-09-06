@@ -19,7 +19,7 @@ const form = () =>{
                 <div className='Back'>
                     <Link to="/"><img src='/assets/backtoblog.png'/></Link>
                 </div>
-           </div>
+            </div>
         </div>
     );
 }
