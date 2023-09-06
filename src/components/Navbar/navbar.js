@@ -1,7 +1,7 @@
 import('./navbar.css')
 const Navbar = () =>{
     return(
-        <div className="box">
+        <div className="boxx">
             <img src="/assets/header.png"/>
         </div>
     );

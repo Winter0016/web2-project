@@ -4,10 +4,10 @@
     height:auto;
 }
 .container1{
-    width:100%;
+    margin-top: 2vh;
+    padding:0 8vw;
     height:auto;
-    background-color: #5994B6;
-    margin-top:-0.5vh;
+    background-color: #5994B6;    
 }
 .container1 img{
     width:100%;
@@ -18,7 +18,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 8vw;
+    padding: 0 15vw;
     background-color: #5994B6;
     height:100%;
 }
@@ -30,6 +30,9 @@
     height:fit-content;
     background-color: #5994B6;
     
+}
+.picspecial11{
+    margin-bottom:8vh;
 }
 .pic1 img,.pic2 img{
     width:100%;
@@ -76,10 +79,14 @@
 }
 .p1 nav{
     display: inline-block; /* Add this to prevent line breaks */
-    color:black;
-    background-color: white;
+    color:white;
+    background-color: grey;
+    height:2vw;
+    text-align: center;
     text-decoration: none;
     font-size: 1vw;
+    padding-top:0.2vw;
+    width:5.8vw;
 }
 .p1 .font{
     color:black ;
@@ -91,10 +98,14 @@
 }
 .p3 nav{
     display: inline-block; /* Add this to prevent line breaks */
-    color:black;
-    background-color: white;
+    color:white;
+    background-color: grey;
+    height:2vw;
+    text-align: center;
     text-decoration: none;
     font-size: 1vw;
+    padding-top:0.2vw;
+    width:5.8vw;
 }
 .p3 .font{
     color:black ;
@@ -118,3 +129,61 @@
     flex-direction: column;
     align-items: end;
 }
+
+@media (max-width: 751px) {
+    .container1{
+        margin-top: 2vh;
+        padding:0 2vw;
+        height:auto;
+        background-color: #5994B6;    
+    }
+    .container2, .container3{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1.4vw;
+        background-color: #5994B6;
+        height:100%;
+    }
+
+    .p1{
+        width: 25vw;
+        height:fit-content;
+        margin-right:11vw;
+    }
+    .p1 nav{
+        display: inline-block; /* Add this to prevent line breaks */
+        color:white;
+        background-color: grey;
+        height:3vw;
+        text-align: center;
+        text-decoration: none;
+        font-size: 1.3vw;
+        padding-top:1vw;
+        width:7vw;
+    }
+    .p1 .font{
+        color:black ;
+        font-size: 1.97vw;
+    }
+    .p3{
+        width:25vw;
+        height:fit-content;
+    }
+    .p3 nav{
+        display: inline-block; /* Add this to prevent line breaks */
+        color:white;
+        background-color: grey;
+        height:3vw;
+        text-align: center;
+        text-decoration: none;
+        font-size: 1.3vw;
+        padding-top:1vw;
+        width:7vw;
+    }
+    .p3 .font{
+        color:black ;
+        font-size: 1.97vw;
+    }
+  }

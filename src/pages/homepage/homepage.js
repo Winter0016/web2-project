@@ -10,7 +10,7 @@ const homepage = () =>{
                 <div className="pic1">
                     <img src="/assets/viewer.png"/>
                 </div>
-                <div className="pic1">
+                <div className="pic1 picspecial11">
                     <img src="/assets/mystory.png"/>
                 </div>
                 <div className="pic2">
