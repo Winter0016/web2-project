@@ -1,55 +1,32 @@
 // import { getExampleApi } from "@/api/example";
 import { takeLatest, put, call } from "redux-saga/effects";
-import { BOOK } from "./constants";
-import { getBook, getBookSuccess } from "./actions";
-import { createBookApi, deleteBookApi, getListBookApi, updateBookApi } from "../../api/Patrons";
+import { PATRON } from "./constants";
+import { getPatron, getPatronSuccess } from "./actions";
+import { createPatronApi, getListPatronApi } from "../../api/Patrons";
 
-function* handlerGetListBooks({ data }) {
+function* handlerGetListPatrons({ data }) {
   try {
-    const res = yield call(getListBookApi, data);
-    yield put(getBookSuccess(res));
+    const res = yield call(getListPatronApi, data);
+    yield put(getPatronSuccess(res));
   } catch (err) {
-    console.log("err handlerGetListBooks", err);
+    console.log("err handlerGetListPatrons", err);
   }
 }
 
-function* handlerCreateBook({ data }) {
+function* handlerCreatePatron({ data }) {
   try {
-    yield call(createBookApi, data);
-    const res2 = yield call(getListBookApi);
+    yield call(createPatronApi, data);
+    const res2 = yield call(getListPatronApi);
     console.log('res2res2', res2)
-    yield put(getBookSuccess(res2));
+    yield put(getPatronSuccess(res2));
   } catch (err) {
-    console.log("err handlerCreateBook", err);
-  }
-}
-
-function* handlerDeleteBook({ id }) {
-  try {
-    yield call(deleteBookApi, id);
-    const res2 = yield call(getListBookApi);
-    yield put(getBookSuccess(res2));
-  } catch (err) {
-    console.log("err handlerDeleteBook", err);
-  }
-}
-
-function* handlerUpdateBook({ id, data }) {
-  try {
-    yield call(updateBookApi, id, data);
-    const res2 = yield call(getListBookApi);
-    yield put(getBookSuccess(res2));
-  } catch (err) {
-    console.log("err handlerUpdateBook", err);
+    console.log("err handlerCreatePatron", err);
   }
 }
 
 function* root() {
-  yield takeLatest(BOOK.BOOK_GET_LIST, handlerGetListBooks);
-  yield takeLatest(BOOK.BOOK_CREATE, handlerCreateBook);
-  yield takeLatest(BOOK.DELETE_BOOK, handlerDeleteBook);
-  yield takeLatest(BOOK.EDIT_BOOK, handlerUpdateBook);
-
+  yield takeLatest(PATRON.PATRON_GET_LIST, handlerGetListPatrons);
+  yield takeLatest(PATRON.PATRON_CREATE, handlerCreatePatron);
 }
 
 export default root;

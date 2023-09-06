@@ -1,7 +1,7 @@
-import { BOOK } from "./constants";
+import { PATRON } from "./constants";
 
 const initialState = {
-  books: [],
+  patrons: [],
   pages: {
     current: 1,
     prev: 0,
@@ -14,13 +14,13 @@ const initialState = {
 
 export default function app(state = initialState, action) {
   switch (action.type) {
-    case BOOK.BOOK_GET_LIST_SUCCESS:
+    case PATRON.PATRON_GET_LIST_SUCCESS:
       return {
         ...state,
-        books: action.data.data,
+        patrons: action.data.data,
         pages: action?.data?.pages
       };
-    case BOOK.CHANGE_PAGE: {
+    case PATRON.CHANGE_PAGE: {
       console.log(action)
       return {
         ...state,

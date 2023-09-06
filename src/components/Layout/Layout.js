@@ -1,5 +1,4 @@
 import Navbar from "../Navbar/navbar.js";
-import { styled } from "styled-components";
 import Footer from "../Footer/footer.js";
 import('./Layout.css')
 const Layout = (props) => {

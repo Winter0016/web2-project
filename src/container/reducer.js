@@ -1,9 +1,9 @@
 import { combineReducers } from "redux";
-import bookReducer from "./Patron/reducer";
+import patronReducer from "./Patron/reducer";
 
 const reducer = () =>
   combineReducers({
-    bookReducer,
+    patronReducer,
   });
 
 export default reducer;
