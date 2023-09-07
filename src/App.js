@@ -5,8 +5,12 @@ import PATRON from "./pages/patron/patron.js";
 import SEE from "./pages/moreblogs/blogs.js";
 import Submitted from"./pages/submit/submit.js";
 import FORMAT from "./pages/form/form.js";
+import { BlogContextProvider } from './context/blogContextProvider.js';
+
+
 function App() {
   return (
+    <BlogContextProvider>
     <BrowserRouter>
       <Layout>
         <Routes>
@@ -18,6 +22,7 @@ function App() {
         </Routes>
       </Layout>
     </BrowserRouter>
+    </BlogContextProvider>
   );
 }
 

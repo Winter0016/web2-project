@@ -16,5 +16,9 @@ export const createPatron = (data) => ({
   data,
 })
 
+export const changePage = (page) => ({
+  type: PATRON.CHANGE_PAGE,
+  page,
+})
 
 
