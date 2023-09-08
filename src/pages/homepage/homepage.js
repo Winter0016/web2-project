@@ -4,7 +4,7 @@ const homepage = () =>{
     return(
         <div class="box">
             <div className="container1">
-                <img src="/assets/intro2.png"/>
+                <img src="/assets/Intro2.png"/>
             </div>
             <div className="container2">
                 <div className="pic1">
