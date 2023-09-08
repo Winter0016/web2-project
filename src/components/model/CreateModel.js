@@ -3,13 +3,6 @@ import { useDispatch, Provider } from "react-redux";
 import { createPatron } from "../../container/Patron/actions";
 import { Link } from "react-router-dom";
 
-const CreateModelWrapper = () => {
-    return (
-        <Provider store={null}>
-            <CreateModel />
-        </Provider>
-    )
-}
 
 const CreateModel = ({ isOpen, setOpen, isActive }) => {
     const dispatch = useDispatch();

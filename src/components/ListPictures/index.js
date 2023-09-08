@@ -3,13 +3,6 @@ import Pagination from "../Pagination";
 import { changePage } from "../../container/Patron/actions";
 import { useDispatch, useSelector, Provider } from "react-redux";
 
-const ListPicturesWrapper = () => {
-    return (
-        <Provider store={null}>
-            <ListPictures />
-        </Provider>
-    )
-}
 
 const ListPictures = () => {
 

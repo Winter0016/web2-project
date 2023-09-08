@@ -3,15 +3,9 @@ import Patron from "./Patron";
 import Pagination from "../Pagination";
 import { changePage } from "../../container/Patron/actions";
 import { useDispatch, useSelector, Provider } from "react-redux";
+
 //import { BlogContextProvider } from "../../context/blogContextProvider";
 
-const ListPatronsWrapper = () => {
-    return (
-        <Provider store={null}>
-            <ListPatrons />
-        </Provider>
-    )
-}
 
 const ListPatrons = () => {
 

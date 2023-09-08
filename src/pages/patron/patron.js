@@ -6,19 +6,7 @@ const patron = () =>{
     console.log("Hellooo");
     return(
         
-        <div className='patron1'>
-            <div className='patron2'>
-                    <ListPatrons />
-                <div className="patron3">
-                    <Link to="/sign"><img src="/assets/become.png"/></Link>
-                </div>
-            </div>
-            <div className="Back-container Back-container2">
-                <div className='Back'>
-                    <Link to="/"><img src='/assets/backtoblog.png'/></Link>
-                </div>
-           </div>
-        </div>
+        <ListPatrons />
         
     );
 }
