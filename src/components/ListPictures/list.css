@@ -1,0 +1,8 @@
+.BLOG2{
+    border:solid;
+    flex-wrap: wrap; /* Enable wrapping */
+    min-height: 900px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 13vw;
+}
