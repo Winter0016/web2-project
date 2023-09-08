@@ -1,6 +1,15 @@
 import Picture from "./Picture";
 import Pagination from "../Pagination";
-import { useDispatch, useSelector } from "react-redux";
+import { changePage } from "../../container/Patron/actions";
+import { useDispatch, useSelector, Provider } from "react-redux";
+
+const ListPicturesWrapper = () => {
+    return (
+        <Provider store={null}>
+            <ListPictures />
+        </Provider>
+    )
+}
 
 const ListPictures = () => {
 
@@ -9,7 +18,7 @@ const ListPictures = () => {
 
     const changePageHandler = (value) => {
         dispatch(changePage(value));
-    };
+    }; 
 
     return (
         <div>

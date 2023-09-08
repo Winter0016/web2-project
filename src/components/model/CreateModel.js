@@ -1,6 +1,15 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, Provider } from "react-redux";
 import { createPatron } from "../../container/Patron/actions";
+import { Link } from "react-router-dom";
+
+const CreateModelWrapper = () => {
+    return (
+        <Provider store={null}>
+            <CreateModel />
+        </Provider>
+    )
+}
 
 const CreateModel = ({ isOpen, setOpen, isActive }) => {
     const dispatch = useDispatch();
@@ -52,19 +61,7 @@ const CreateModel = ({ isOpen, setOpen, isActive }) => {
         setPatronData(newPatronData);
     };
 
-    const checkPatronkDataValid = (event) => {
-        const { name, value } = event.target;
-        if (value && value === "") {
-          const newPatronData = {
-            ...patronData,
-            [name]: {
-              ...patronData[name],
-              isError: true,
-            },
-          };
-          setBookData(newPatronData);
-        }
-      };
+    
     
       return (
         <div className="f1">
