@@ -50,10 +50,11 @@ const ListPatrons = () => {
                         onPageChange={(page) => changePageHandler(page)}
                     />
                 </div>
-*/}
+
                 <div className="patron3">
                     <Link to="/sign"><img src="/assets/become.png"/></Link>
                 </div>
+*/}
             </div>
             <div className="Back-container Back-container2">
                 <div className='Back'>

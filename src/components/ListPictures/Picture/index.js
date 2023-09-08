@@ -1,14 +1,15 @@
-import { Link } from "react-router-dom";
+import "./index.css"
 
 const Picture = (props) => {
     const { data } = props;
+    console.log('HLLLO')
     return (
     <div className="container3">
         <div className="box1">
             <div className="p1">
                 <img src={data.image}/>
                 <div className="font">
-                    <nav>{data.description}<Link to="/moreblogs">Read more</Link></nav>
+                    {data.description}Read more
                 </div>
             </div>
         </div>

@@ -5,58 +5,7 @@ import { Link } from "react-router-dom";
 import { createPatronApi } from "../../api/Patrons";
 
 
-const CreateModel = ({ isOpen, setOpen, isActive }) => {
-    const dispatch = useDispatch();
-
-    const [patronData, setPatronData] = useState({
-        name : {
-            value: "",
-            isError: false,
-        },
-        
-        donation: {
-            value: "",
-            isError: false,
-        },
-
-        comment: {
-            value: "",
-            isError: false,
-        },
-    });
-
-    const handleClose = (event) => {
-        if(event.target === event.currentTarget) {
-            setOpen(false);
-        }
-    };
-
-    const handlerSubmit = (event) => {
-        const data = {
-            name: patronData.name.value,
-            donation: patronData.donation.value,
-            comment: patronData.comment.value,
-        };
-        if(data.name !== "" && data.donation !== "" && data.comment !== "") {
-            dispatch(createPatron(data));
-            setOpen(false);
-        }
-    };
-
-    const onChangeInputHandler = (event) => {
-        const { name, value} = event.target;
-        const newPatronData = {
-            ...patronData,
-            [name]: {
-                ...patronData[name],
-                value: value,
-            },
-        };
-        setPatronData(newPatronData);
-    };
-
-    
-    
+const CreateModel = () => {   
       return (
         <div className="f1">
             <form className="commentform">
@@ -66,9 +15,7 @@ const CreateModel = ({ isOpen, setOpen, isActive }) => {
                     type="text" 
                     placeholder="Your name please" 
                     className="name" required
-                    value={patronData.name.value}
-                    error={false}
-                    onChange={onChangeInputHandler}
+                    value=''
                 >
                 </input>
                 
@@ -77,8 +24,7 @@ const CreateModel = ({ isOpen, setOpen, isActive }) => {
                     type="number"
                     placeholder="0" 
                     className="donate" required
-                    value={patronData.donation.value}
-                    onChange={onChangeInputHandler}
+                    value=''
                 >
                 </input>       
                 
@@ -87,14 +33,13 @@ const CreateModel = ({ isOpen, setOpen, isActive }) => {
                     className="comment"
                     placeholder="Please share us your thoughts."  
                     rows="4" cols="50" required
-                    value={patronData.comment.value}
-                    onChange={onChangeInputHandler}
+                    value=''
                 >
                 </textarea>             
                 
                 <div className="submit-container">
                     <Link to="/sucessfully-submitted">
-                        <button type="submit" className="submit" onClick={handlerSubmit}>Submit</button>
+                        <button type="submit" className="submit">Submit</button>
                     </Link>
                 </div>
             

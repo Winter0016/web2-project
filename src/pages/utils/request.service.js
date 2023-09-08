@@ -4,7 +4,7 @@ import { API_ROOT } from "./constants"
 const apiService = () => {
 	const configOption = {
 		baseURL: API_ROOT,
-		timeout: 5000,
+		timeout: 20000,
 	}
 	const instance = axios.create(configOption)
 
