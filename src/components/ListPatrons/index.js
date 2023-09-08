@@ -3,13 +3,16 @@ import Patron from "./Patron";
 import Pagination from "../Pagination";
 import { changePage } from "../../container/Patron/actions";
 import { useDispatch, useSelector, Provider } from "react-redux";
-
+import { getListPatronApi } from "../../api/Patrons";
 //import { BlogContextProvider } from "../../context/blogContextProvider";
 
 
+const patrons = await getListPatronApi();
+const myData = patrons.data
+console.log(myData)
 const ListPatrons = () => {
-
-    const { patrons, pages } = useSelector((state) => state.patronReducer);
+    
+    //const { patrons, pages } = useSelector((state) => state.patronReducer);
     const dispatch = useDispatch();
 
     const changePageHandler = (value) => {
@@ -33,12 +36,13 @@ const ListPatrons = () => {
                             <img src="/assets/letter3.png"/>
                         </div>
                     </div>
-                    {patrons.map((item) => (
+
+                    {myData.map((item) => (
                         <Patron data = {item} />
                     ))}
                 </div>
 
-                <div className="pagination">
+{/*                <div className="pagination">
                     <Pagination
                         currentPage={pages.current}
                         totalCount={pages.total * 5}
@@ -46,7 +50,7 @@ const ListPatrons = () => {
                         onPageChange={(page) => changePageHandler(page)}
                     />
                 </div>
-
+*/}
                 <div className="patron3">
                     <Link to="/sign"><img src="/assets/become.png"/></Link>
                 </div>

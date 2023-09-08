@@ -3,7 +3,6 @@ import ListPatrons from "../../components/ListPatrons";
 
 import ('./patron.css')
 const patron = () =>{
-    console.log("Hellooo");
     return(
         
         <ListPatrons />

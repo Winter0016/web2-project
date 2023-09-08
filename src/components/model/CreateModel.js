@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useDispatch, Provider } from "react-redux";
 import { createPatron } from "../../container/Patron/actions";
 import { Link } from "react-router-dom";
+import { createPatronApi } from "../../api/Patrons";
 
 
 const CreateModel = ({ isOpen, setOpen, isActive }) => {
