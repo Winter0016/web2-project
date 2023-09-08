@@ -100,7 +100,7 @@ const Pagination = (props) => {
         onPageChange(currentPage + 1);
     };
 
-    const Previous = () => {
+    const onPrevious = () => {
         onPageChange(currentPage - 1);
     };
 
