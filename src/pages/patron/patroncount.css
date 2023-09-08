@@ -1,0 +1,13 @@
+.pat1{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    
+}
+.patname{
+    width:fit-content;
+    font-size: 1.5vw;
+    border: 6px solid transparent;
+    margin-top:  2vw;
+    margin-left: 3vw;
+}

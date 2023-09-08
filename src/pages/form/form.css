@@ -1,0 +1,68 @@
+.f1{
+    width:auto;
+    min-height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.commentform{
+    width:30vw;
+    height:fit-content;
+    display: flex;
+    flex-direction: column;
+    padding:2.6vw;
+    background-color: #FF8719;
+    margin-top:5vh;
+}
+.name{
+    font-size: 3vw;
+    width:100%;
+    border-radius: 10px;
+    margin-bottom: 5vh;
+    background-color: white;
+    color:black;
+}
+.nam{
+    width:6vw;
+    height:auto;
+}
+.don{
+    margin-bottom: 1vh;
+    width:7vw;
+    height:auto;
+}
+.donate{
+    font-size: 3vw;
+    width:9vw;
+    border-radius: 10px;
+    margin-bottom: 5vh;
+    background-color: white;
+    color:black;
+}
+.comment{
+    font-size: 3vw;
+    width:100%;
+    border-radius: 10px;
+    background-color: white;
+    color:black;
+    margin-bottom:5vh;
+}
+.submit-container{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    height:fit-content;
+}
+.submit{
+    border-radius:10px;
+    background-color: #F8E4E4;
+    width:fit-content;
+    font-size: 2vw;
+    height:fit-content;
+    color:black;
+}
+.Back-container2{
+    margin-bottom: 3vh;
+}
